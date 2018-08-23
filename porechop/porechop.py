@@ -24,13 +24,24 @@ import re
 from multiprocessing.dummy import Pool as ThreadPool
 from collections import defaultdict
 from .misc import load_fasta_or_fastq, print_table, red, bold_underline, MyHelpFormatter, int_to_str
-from .adapters import ADAPTERS, make_full_native_barcode_adapter, make_full_rapid_barcode_adapter
+from .adapters import ADAPTERS, make_full_native_barcode_adapter, make_full_rapid_barcode_adapter, Adapter
 from .nanopore_read import NanoporeRead
 from .version import __version__
 
+DEFTRIMRANGE=(3,200)
 
 def main():
+    print("Porechop mod for fingerprinting. 2017",file=sys.stderr)
     args = get_arguments()
+
+    if args.trimgtgrange != (0,0):
+        ADAPTERS_GTGs=[Adapter('GTG rep. n={}'.format(n), 
+               start_sequence=('repGTG{}'.format(n),'GTG'*n),
+               end_sequence=('repGTG{}_rev'.format(n),'CAC'*n)) 
+               for n in reversed(range(max(args.trimgtgrange[0],1),max(args.trimgtgrange[1]+1,2)))
+              ]
+        ADAPTERS.extend(ADAPTERS_GTGs)
+
     reads, check_reads, read_type = load_reads(args.input, args.verbosity, args.print_dest,
                                                args.check_reads)
 
@@ -48,6 +59,7 @@ def main():
         forward_or_reverse_barcodes = None
     if args.verbosity > 0:
         print('\n', file=args.print_dest)
+    
 
     if matching_sets:
         check_barcodes = (args.barcode_dir is not None)
@@ -58,12 +70,13 @@ def main():
                                    args.barcode_diff, args.require_two_barcodes,
                                    forward_or_reverse_barcodes)
         display_read_end_trimming_summary(reads, args.verbosity, args.print_dest)
-
-        find_adapters_in_read_middles(reads, matching_sets, args.verbosity, args.middle_threshold,
+        
+        if not args.nomiddletrim:
+            find_adapters_in_read_middles(reads, matching_sets, args.verbosity, args.middle_threshold,
                                       args.extra_middle_trim_good_side,
                                       args.extra_middle_trim_bad_side, args.scoring_scheme_vals,
                                       args.print_dest, args.threads, args.discard_middle)
-        display_read_middle_trimming_summary(reads, args.discard_middle, args.verbosity,
+            display_read_middle_trimming_summary(reads, args.discard_middle, args.verbosity,
                                              args.print_dest)
     elif args.verbosity > 0:
         print('No adapters found - output reads are unchanged from input reads\n',
@@ -103,6 +116,9 @@ def get_arguments():
     main_group.add_argument('-t', '--threads', type=int, default=default_threads,
                             help='Number of threads to use for adapter alignment')
     main_group.add_argument('--version', action='version', version=__version__)
+    main_group.add_argument('--fp2ndrun', action='store_true',
+                               help='Fingerprinting 2nd run: sets --trimgtgrange {}-{} (if not set) '
+                                    'and --nomiddletrim options.'.format(DEFTRIMRANGE[0],DEFTRIMRANGE[1]))
 
     barcode_group = parser.add_argument_group('Barcode binning settings',
                                               'Control the binning of reads based on barcodes '
@@ -124,8 +140,17 @@ def get_arguments():
                                     'match for the barcode on both their start and end (default: '
                                     'a read can be binned with a match at its start or end)')
     barcode_group.add_argument('--untrimmed', action='store_true',
-                               help='Bin reads but do not trim the ends (appropriate if reads '
-                                    'are to be used with Nanopolish)')
+                               help='Bin reads but do not trim them (appropriate if reads are to '
+                                    'be used with Nanopolish) (default: trim the reads)')
+
+    def validate_trimgtg_range(s):
+        try:
+            return tuple(int(sn) for sn in s.split("-")[:2])
+        except:
+            raise Exception("Wrong --trimgtgrange argument. Accepted values are strings of type '2-20'.")
+
+    barcode_group.add_argument('--trimgtgrange',type=validate_trimgtg_range, default=(0,0),
+                               help='Trim GTG repetitions from-to (eg. 2-20). Use 0-0 to turn off.')
 
     adapter_search_group = parser.add_argument_group('Adapter search settings',
                                                      'Control how the program determines which '
@@ -158,6 +183,8 @@ def get_arguments():
     middle_trim_group = parser.add_argument_group('Middle adapter settings',
                                                   'Control the splitting of read from middle '
                                                   'adapters')
+    middle_trim_group.add_argument('--nomiddletrim', action='store_true',
+                                   help='Do not perform middle trimming or discarding.',default=False)
     middle_trim_group.add_argument('--discard_middle', action='store_true',
                                    help='Reads with middle adapters will be discarded (default: '
                                         'reads with middle adapters are split) (this option is '
@@ -176,6 +203,11 @@ def get_arguments():
                                         'will not be outputted')
 
     args = parser.parse_args()
+    
+    if args.fp2ndrun:
+        args.nomiddletrim = True
+        if args.trimgtgrange == (0,0):
+            args.trimgtgrange = DEFTRIMRANGE
 
     try:
         scoring_scheme = [int(x) for x in args.scoring_scheme.split(',')]
