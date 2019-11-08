@@ -43,9 +43,7 @@ class Adapter(object):
         Gets the barcode name for the output files. We want a concise name, so it looks at all
         options and chooses the shortest.
         """
-        possible_names = [self.name]
-        if self.start_sequence:
-            possible_names.append(self.start_sequence[0])
+        possible_names = [self.name, self.start_sequence[0]]
         if self.end_sequence:
             possible_names.append(self.end_sequence[0])
         barcode_name = sorted(possible_names, key=lambda x: len(x))[0]
@@ -78,36 +76,28 @@ ADAPTERS = [Adapter('SQK-NSK007',
                     start_sequence=('SQK-NSK007_Y_Top', 'AATGTACTTCGTTCAGTTACGTATTGCT'),
                     end_sequence=('SQK-NSK007_Y_Bottom', 'GCAATACGTAACTGAACGAAGT')),
 
-
             Adapter('Rapid',
-                    start_sequence=('Rapid_adapter',
-                                    'GTTTTCGCATTTATCGTGAAACGCTTTCGCGTTTTTCGTGCGCCGCTTCA')),
-
-            Adapter('RBK004_upstream',
-                    start_sequence=('RBK004_upstream', 'AATGTACTTCGTTCAGTTACGGCTTGGGTGTTTAACC')),
-
+                    start_sequence=('Rapid_adapter', 'GTTTTCGCATTTATCGTGAAACGCTTTCGCGTTTTTCGTGCGCCGCTTCA')),
 
             Adapter('SQK-MAP006',
-                    start_sequence=('SQK-MAP006_Y_Top_SK63',    'GGTTGTTTCTGTTGGTGCTGATATTGCT'),
-                    end_sequence=  ('SQK-MAP006_Y_Bottom_SK64', 'GCAATATCAGCACCAACAGAAA')),
+                            start_sequence=('SQK-MAP006_Y_Top_SK63',    'GGTTGTTTCTGTTGGTGCTGATATTGCT'),
+                            end_sequence=  ('SQK-MAP006_Y_Bottom_SK64', 'GCAATATCAGCACCAACAGAAA')),
 
-            Adapter('SQK-MAP006 short',
+            Adapter('SQK-MAP006 Short',
                     start_sequence=('SQK-MAP006_Short_Y_Top_LI32',    'CGGCGTCTGCTTGGGTGTTTAACCT'),
                     end_sequence=  ('SQK-MAP006_Short_Y_Bottom_LI33', 'GGTTAAACACCCAAGCAGACGCCG')),
 
-
-            # The PCR adapters are used both in PCR DNA kits and some cDNA kits.
             Adapter('PCR adapters 1',
                     start_sequence=('PCR_1_start', 'ACTTGCCTGTCGCTCTATCTTC'),
-                    end_sequence=  ('PCR_1_end',   'GAAGATAGAGCGACAGGCAAGT')),
+                    end_sequence=  ('PCR_1_end', 'GAAGATAGAGCGACAGGCAAGT')),
 
-            Adapter('PCR adapters 2',
-                    start_sequence=('PCR_2_start', 'TTTCTGTTGGTGCTGATATTGC'),
-                    end_sequence=  ('PCR_2_end',   'GCAATATCAGCACCAACAGAAA')),
+            Adapter('PCR tail 1',
+                    start_sequence=('PCR_tail_1_start', 'TTAACCTTTCTGTTGGTGCTGATATTGC'),
+                    end_sequence=  ('PCR_tail_1_end',   'GCAATATCAGCACCAACAGAAAGGTTAA')),
 
-            Adapter('PCR adapters 3',
-                    start_sequence=('PCR_3_start', 'TACTTGCCTGTCGCTCTATCTTC'),
-                    end_sequence=  ('PCR_3_end',   'GAAGATAGAGCGACAGGCAAGTA')),
+            Adapter('PCR tail 2',
+                    start_sequence=('PCR_tail_2_start', 'TTAACCTACTTGCCTGTCGCTCTATCTTC'),
+                    end_sequence=  ('PCR_tail_2_end',   'GAAGATAGAGCGACAGGCAAGTAGGTTAA')),
 
 
             # 1D^2 kit adapters are interesting. ONT provided the following sequences on their site:
@@ -127,12 +117,11 @@ ADAPTERS = [Adapter('SQK-NSK007',
             # adapter sequences here.
 
 
-            Adapter('cDNA SSP',
-                    start_sequence=('cDNA_SSP',     'TTTCTGTTGGTGCTGATATTGCTGCCATTACGGCCGGG'),
-                    end_sequence=  ('cDNA_SSP_rev', 'CCCGGCCGTAATGGCAGCAATATCAGCACCAACAGAAA')),
-
-
             # Some barcoding kits (like the native barcodes) use the rev comp barcode at the start
+            # of the read and the forward barcode at the end of the read.
+
+            # Other barcoding kits (like the PCR and rapid barcodes) use the reverse barcode at the
+
             # start of the read and the rev comp barcode at the end of the read.
 
             Adapter('Barcode 1 (reverse)',
@@ -347,9 +336,9 @@ ADAPTERS = [Adapter('SQK-NSK007',
 
             Adapter('Barcode 36 (reverse)',
 
-            start_sequence=('repBC36_rev', 'TGTTTCCTCCTCTAACTGGGACAT'),
+            start_sequence=('repBC36_rev', 'ATGTCCCAGTTAGAGGAGGAAACA'),
 
-            end_sequence=('repBC36', 'ATGTCCCAGTTAGAGGAGGAAACA')),
+            end_sequence=('repBC36', 'TGTTTCCTCCTCTAACTGGGACAT')),
 
             Adapter('Barcode 37 (reverse)',
 
@@ -575,135 +564,135 @@ ADAPTERS = [Adapter('SQK-NSK007',
 
             Adapter('Barcode 74 (reverse)',
 
-            start_sequence=('repBC74_rev', 'AGTGGAAGTGTTGGGATGCTTGTA'),
+            start_sequence=('repBC74', 'AGTGGAAGTGTTGGGATGCTTGTA'),
 
-            end_sequence=('repBC74', 'TACAAGCATCCCAACACTTCCACT')),
+            end_sequence=('repBC74_rev', 'TACAAGCATCCCAACACTTCCACT')),
 
             Adapter('Barcode 75 (reverse)',
 
-            start_sequence=('repBC75_rev', 'ACAACAGGGTTCATCACAATGGTC'),
+            start_sequence=('repBC75', 'ACAACAGGGTTCATCACAATGGTC'),
 
-            end_sequence=('repBC75', 'GACCATTGTGATGAACCCTGTTGT')),
+            end_sequence=('repBC75_rev', 'GACCATTGTGATGAACCCTGTTGT')),
 
             Adapter('Barcode 76 (reverse)',
 
-            start_sequence=('repBC76_rev', 'GTCCAGGGTTGATGTAACAAGCAT'),
+            start_sequence=('repBC76', 'GTCCAGGGTTGATGTAACAAGCAT'),
 
-            end_sequence=('repBC76', 'ATGCTTGTTACATCAACCCTGGAC')),
+            end_sequence=('repBC76_rev', 'ATGCTTGTTACATCAACCCTGGAC')),
 
             Adapter('Barcode 77 (reverse)',
 
-            start_sequence=('repBC77_rev', 'GTTGTATCCCTGAGAAACAGGTCG'),
+            start_sequence=('repBC77', 'GTTGTATCCCTGAGAAACAGGTCG'),
 
-            end_sequence=('repBC77', 'CGACCTGTTTCTCAGGGATACAAC')),
+            end_sequence=('repBC77_rev', 'CGACCTGTTTCTCAGGGATACAAC')),
 
             Adapter('Barcode 78 (reverse)',
 
-            start_sequence=('repBC78_rev', 'TTCTGATTCAAAGGTTCGGTTGTT'),
+            start_sequence=('repBC78', 'TTCTGATTCAAAGGTTCGGTTGTT'),
 
-            end_sequence=('repBC78', 'AACAACCGAACCTTTGAATCAGAA')),
+            end_sequence=('repBC78_rev', 'AACAACCGAACCTTTGAATCAGAA')),
 
             Adapter('Barcode 79 (reverse)',
 
-            start_sequence=('repBC79_rev', 'CAGCAGTGAGAACTATCTCCGAGA'),
+            start_sequence=('repBC79', 'CAGCAGTGAGAACTATCTCCGAGA'),
 
-            end_sequence=('repBC79', 'TCTCGGAGATAGTTCTCACTGCTG')),
+            end_sequence=('repBC79_rev', 'TCTCGGAGATAGTTCTCACTGCTG')),
 
             Adapter('Barcode 80 (reverse)',
 
-            start_sequence=('repBC80_rev', 'GAATCGCTATCCTATGTTCATCCG'),
+            start_sequence=('repBC80', 'GAATCGCTATCCTATGTTCATCCG'),
 
-            end_sequence=('repBC80', 'CGGATGAACATAGGATAGCGATTC')),
+            end_sequence=('repBC80_rev', 'CGGATGAACATAGGATAGCGATTC')),
 
             Adapter('Barcode 81 (reverse)',
 
-            start_sequence=('repBC81_rev', 'CCGAAACAACTTCACAAGATGAGG'),
+            start_sequence=('repBC81', 'CCGAAACAACTTCACAAGATGAGG'),
 
-            end_sequence=('repBC81', 'CCTCATCTTGTGAAGTTGTTTCGG')),
+            end_sequence=('repBC81_rev', 'CCTCATCTTGTGAAGTTGTTTCGG')),
 
             Adapter('Barcode 82 (reverse)',
 
-            start_sequence=('repBC82_rev', 'TAGTCCTGGAACTCGACATACCGT'),
+            start_sequence=('repBC82', 'TAGTCCTGGAACTCGACATACCGT'),
 
-            end_sequence=('repBC82', 'ACGGTATGTCGAGTTCCAGGACTA')),
+            end_sequence=('repBC82_rev', 'ACGGTATGTCGAGTTCCAGGACTA')),
 
             Adapter('Barcode 83 (reverse)',
 
-            start_sequence=('repBC83_rev', 'TTCGACCTTACCTAGATCAAGCCA'),
+            start_sequence=('repBC83', 'TTCGACCTTACCTAGATCAAGCCA'),
 
-            end_sequence=('repBC83', 'TGGCTTGATCTAGGTAAGGTCGAA')),
+            end_sequence=('repBC83_rev', 'TGGCTTGATCTAGGTAAGGTCGAA')),
 
             Adapter('Barcode 84 (reverse)',
 
-            start_sequence=('repBC84_rev', 'TGGCACAGGTTCTAGGTCCACTAC'),
+            start_sequence=('repBC84', 'TGGCACAGGTTCTAGGTCCACTAC'),
 
-            end_sequence=('repBC84', 'GTAGTGGACCTAGAACCTGTGCCA')),
+            end_sequence=('repBC84_rev', 'GTAGTGGACCTAGAACCTGTGCCA')),
 
             Adapter('Barcode 85 (reverse)',
 
-            start_sequence=('repBC85_rev', 'GATCATCCAACTAACTCCTCCGTT'),
+            start_sequence=('repBC85', 'GATCATCCAACTAACTCCTCCGTT'),
 
-            end_sequence=('repBC85', 'AACGGAGGAGTTAGTTGGATGATC')),
+            end_sequence=('repBC85_rev', 'AACGGAGGAGTTAGTTGGATGATC')),
 
             Adapter('Barcode 86 (reverse)',
 
-            start_sequence=('repBC86_rev', 'TACTTACGCTTGTTGGGATCACCT'),
+            start_sequence=('repBC86', 'TACTTACGCTTGTTGGGATCACCT'),
 
-            end_sequence=('repBC86', 'AGGTGATCCCAACAAGCGTAAGTA')),
+            end_sequence=('repBC86_rev', 'AGGTGATCCCAACAAGCGTAAGTA')),
 
             Adapter('Barcode 87 (reverse)',
 
-            start_sequence=('repBC87_rev', 'CCTCCCTAACAACAGGAGCATGTA'),
+            start_sequence=('repBC87', 'CCTCCCTAACAACAGGAGCATGTA'),
 
-            end_sequence=('repBC87', 'TACATGCTCCTGTTGTTAGGGAGG')),
+            end_sequence=('repBC87_rev', 'TACATGCTCCTGTTGTTAGGGAGG')),
 
             Adapter('Barcode 88 (reverse)',
 
-            start_sequence=('repBC88_rev', 'CTGCTTCGGATCGGTAGTAGAAGA'),
+            start_sequence=('repBC88', 'CTGCTTCGGATCGGTAGTAGAAGA'),
 
-            end_sequence=('repBC88', 'TCTTCTACTACCGATCCGAAGCAG')),
+            end_sequence=('repBC88_rev', 'TCTTCTACTACCGATCCGAAGCAG')),
 
             Adapter('Barcode 89 (reverse)',
 
-            start_sequence=('repBC89_rev', 'CAACTAGCCAAACATTGATGCTGT'),
+            start_sequence=('repBC89', 'CAACTAGCCAAACATTGATGCTGT'),
 
-            end_sequence=('repBC89', 'ACAGCATCAATGTTTGGCTAGTTG')),
+            end_sequence=('repBC89_rev', 'ACAGCATCAATGTTTGGCTAGTTG')),
 
             Adapter('Barcode 90 (reverse)',
 
-            start_sequence=('repBC90_rev', 'GCCTCAAACCGTACCCTCTACATC'),
+            start_sequence=('repBC90', 'GCCTCAAACCGTACCCTCTACATC'),
 
-            end_sequence=('repBC90', 'GATGTAGAGGGTACGGTTTGAGGC')),
+            end_sequence=('repBC90_rev', 'GATGTAGAGGGTACGGTTTGAGGC')),
 
             Adapter('Barcode 91 (reverse)',
 
-            start_sequence=('repBC91_rev', 'AGTAGCGTGAGTTCCTATGGAGCC'),
+            start_sequence=('repBC91', 'AGTAGCGTGAGTTCCTATGGAGCC'),
 
-            end_sequence=('repBC91', 'GGCTCCATAGGAACTCACGCTACT')),
+            end_sequence=('repBC91_rev', 'GGCTCCATAGGAACTCACGCTACT')),
 
             Adapter('Barcode 92 (reverse)',
 
-            start_sequence=('repBC92_rev', 'GGTCCTGTATCTTTCCACTCACAA'),
+            start_sequence=('repBC92', 'GGTCCTGTATCTTTCCACTCACAA'),
 
-            end_sequence=('repBC92', 'TTGTGAGTGGAAAGATACAGGACC')),
+            end_sequence=('repBC92_rev', 'TTGTGAGTGGAAAGATACAGGACC')),
 
             Adapter('Barcode 93 (reverse)',
 
-            start_sequence=('repBC93_rev', 'CCCAAGTCTGAAGTGATGGAAACT'),
+            start_sequence=('repBC93', 'CCCAAGTCTGAAGTGATGGAAACT'),
 
-            end_sequence=('repBC93', 'AGTTTCCATCACTTCAGACTTGGG')),
+            end_sequence=('repBC93_rev', 'AGTTTCCATCACTTCAGACTTGGG')),
 
             Adapter('Barcode 94 (reverse)',
 
-            start_sequence=('repBC94_rev', 'GTAGGTGGCAGTTTGAGGACAATC'),
+            start_sequence=('repBC94', 'GTAGGTGGCAGTTTGAGGACAATC'),
 
-            end_sequence=('repBC94', 'GATTGTCCTCAAACTGCCACCTAC')),
+            end_sequence=('repBC94_rev', 'GATTGTCCTCAAACTGCCACCTAC')),
 
             Adapter('Barcode 95 (reverse)',
 
-            start_sequence=('repBC95_rev', 'AAGTCCATTCTTCTTCCAGACAGG'),
+            start_sequence=('repBC95', 'AAGTCCATTCTTCTTCCAGACAGG'),
 
-            end_sequence=('repBC95', 'CCTGTCTGGAAGAAGAATGGACTT')),
+            end_sequence=('repBC95_rev', 'CCTGTCTGGAAGAAGAATGGACTT')),
 
             Adapter('Barcode 96 (reverse)',
 
@@ -1300,23 +1289,11 @@ def make_full_native_barcode_adapter(barcode_num):
                    end_sequence=('NB' + '%02d' % barcode_num + '_end', end_full_seq))
 
 
-def make_old_full_rapid_barcode_adapter(barcode_num):  # applies to SQK-RBK001
+def make_full_rapid_barcode_adapter(barcode_num):
     barcode = [x for x in ADAPTERS if x.name == 'Barcode ' + str(barcode_num) + ' (forward)'][0]
     start_barcode_seq = barcode.start_sequence[1]
 
-    start_full_seq = 'AATGTACTTCGTTCAGTTACG' + 'TATTGCT' + start_barcode_seq + \
-                     'GTTTTCGCATTTATCGTGAAACGCTTTCGCGTTTTTCGTGCGCCGCTTCA'
+    start_full_seq = 'AATGTACTTCGTTCAGTTACGTATTGCT' + start_barcode_seq + 'GTTTTCGCATTTATCGTGAAACGCTTTCGCGTTTTTCGTGCGCCGCTTCA'
 
-    return Adapter('Rapid barcoding ' + str(barcode_num) + ' (full sequence, old)',
-                   start_sequence=('RB' + '%02d' % barcode_num + '_full', start_full_seq))
-
-
-def make_new_full_rapid_barcode_adapter(barcode_num):  # applies to SQK-RBK004
-    barcode = [x for x in ADAPTERS if x.name == 'Barcode ' + str(barcode_num) + ' (forward)'][0]
-    start_barcode_seq = barcode.start_sequence[1]
-
-    start_full_seq = 'AATGTACTTCGTTCAGTTACG' + 'GCTTGGGTGTTTAACC' + start_barcode_seq + \
-                     'GTTTTCGCATTTATCGTGAAACGCTTTCGCGTTTTTCGTGCGCCGCTTCA'
-
-    return Adapter('Rapid barcoding ' + str(barcode_num) + ' (full sequence, new)',
+    return Adapter('Rapid barcoding ' + str(barcode_num) + ' (full sequence)',
                    start_sequence=('RB' + '%02d' % barcode_num + '_full', start_full_seq))
