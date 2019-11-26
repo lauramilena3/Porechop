@@ -698,7 +698,7 @@ ADAPTERS = [Adapter('SQK-NSK007',
 
             start_sequence=('repBC96_rev', 'ATGGTGGACTCTATGACCGTTCAG'),
 
-            end_sequence=('repBC96', 'CTGAACGGTCATAGAGTCCACCAT'))
+            end_sequence=('repBC96', 'CTGAACGGTCATAGAGTCCACCAT')),
             
             Adapter('Barcode 97(reverse)',
 
