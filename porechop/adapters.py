@@ -336,9 +336,9 @@ ADAPTERS = [Adapter('SQK-NSK007',
 
             Adapter('Barcode 36 (reverse)',
 
-            start_sequence=('repBC36_rev', 'ATGTCCCAGTTAGAGGAGGAAACA'),
+            start_sequence=('repBC36_rev', 'TGTTTCCTCCTCTAACTGGGACAT'),
 
-            end_sequence=('repBC36', 'TGTTTCCTCCTCTAACTGGGACAT')),
+            end_sequence=('repBC36', 'ATGTCCCAGTTAGAGGAGGAAACA')),
 
             Adapter('Barcode 37 (reverse)',
 
@@ -564,713 +564,713 @@ ADAPTERS = [Adapter('SQK-NSK007',
 
             Adapter('Barcode 74 (reverse)',
 
-            start_sequence=('repBC74', 'AGTGGAAGTGTTGGGATGCTTGTA'),
+            start_sequence=('repBC74_rev', 'AGTGGAAGTGTTGGGATGCTTGTA'),
 
-            end_sequence=('repBC74_rev', 'TACAAGCATCCCAACACTTCCACT')),
+            end_sequence=('repBC74', 'TACAAGCATCCCAACACTTCCACT')),
 
             Adapter('Barcode 75 (reverse)',
 
-            start_sequence=('repBC75', 'ACAACAGGGTTCATCACAATGGTC'),
+            start_sequence=('repBC75_rev', 'ACAACAGGGTTCATCACAATGGTC'),
 
-            end_sequence=('repBC75_rev', 'GACCATTGTGATGAACCCTGTTGT')),
+            end_sequence=('repBC75', 'GACCATTGTGATGAACCCTGTTGT')),
 
             Adapter('Barcode 76 (reverse)',
 
-            start_sequence=('repBC76', 'GTCCAGGGTTGATGTAACAAGCAT'),
+            start_sequence=('repBC76_rev', 'GTCCAGGGTTGATGTAACAAGCAT'),
 
-            end_sequence=('repBC76_rev', 'ATGCTTGTTACATCAACCCTGGAC')),
+            end_sequence=('repBC76', 'ATGCTTGTTACATCAACCCTGGAC')),
 
             Adapter('Barcode 77 (reverse)',
 
-            start_sequence=('repBC77', 'GTTGTATCCCTGAGAAACAGGTCG'),
+            start_sequence=('repBC77_rev', 'GTTGTATCCCTGAGAAACAGGTCG'),
 
-            end_sequence=('repBC77_rev', 'CGACCTGTTTCTCAGGGATACAAC')),
+            end_sequence=('repBC77', 'CGACCTGTTTCTCAGGGATACAAC')),
 
             Adapter('Barcode 78 (reverse)',
 
-            start_sequence=('repBC78', 'TTCTGATTCAAAGGTTCGGTTGTT'),
+            start_sequence=('repBC78_rev', 'TTCTGATTCAAAGGTTCGGTTGTT'),
 
-            end_sequence=('repBC78_rev', 'AACAACCGAACCTTTGAATCAGAA')),
+            end_sequence=('repBC78', 'AACAACCGAACCTTTGAATCAGAA')),
 
             Adapter('Barcode 79 (reverse)',
 
-            start_sequence=('repBC79', 'CAGCAGTGAGAACTATCTCCGAGA'),
+            start_sequence=('repBC79_rev', 'CAGCAGTGAGAACTATCTCCGAGA'),
 
-            end_sequence=('repBC79_rev', 'TCTCGGAGATAGTTCTCACTGCTG')),
+            end_sequence=('repBC79', 'TCTCGGAGATAGTTCTCACTGCTG')),
 
             Adapter('Barcode 80 (reverse)',
 
-            start_sequence=('repBC80', 'GAATCGCTATCCTATGTTCATCCG'),
+            start_sequence=('repBC80_rev', 'GAATCGCTATCCTATGTTCATCCG'),
 
-            end_sequence=('repBC80_rev', 'CGGATGAACATAGGATAGCGATTC')),
+            end_sequence=('repBC80', 'CGGATGAACATAGGATAGCGATTC')),
 
             Adapter('Barcode 81 (reverse)',
 
-            start_sequence=('repBC81', 'CCGAAACAACTTCACAAGATGAGG'),
+            start_sequence=('repBC81_rev', 'CCGAAACAACTTCACAAGATGAGG'),
 
-            end_sequence=('repBC81_rev', 'CCTCATCTTGTGAAGTTGTTTCGG')),
+            end_sequence=('repBC81', 'CCTCATCTTGTGAAGTTGTTTCGG')),
 
             Adapter('Barcode 82 (reverse)',
 
-            start_sequence=('repBC82', 'TAGTCCTGGAACTCGACATACCGT'),
+            start_sequence=('repBC82_rev', 'TAGTCCTGGAACTCGACATACCGT'),
 
-            end_sequence=('repBC82_rev', 'ACGGTATGTCGAGTTCCAGGACTA')),
+            end_sequence=('repBC82', 'ACGGTATGTCGAGTTCCAGGACTA')),
 
             Adapter('Barcode 83 (reverse)',
 
-            start_sequence=('repBC83', 'TTCGACCTTACCTAGATCAAGCCA'),
+            start_sequence=('repBC83_rev', 'TTCGACCTTACCTAGATCAAGCCA'),
 
-            end_sequence=('repBC83_rev', 'TGGCTTGATCTAGGTAAGGTCGAA')),
+            end_sequence=('repBC83', 'TGGCTTGATCTAGGTAAGGTCGAA')),
 
             Adapter('Barcode 84 (reverse)',
 
-            start_sequence=('repBC84', 'TGGCACAGGTTCTAGGTCCACTAC'),
+            start_sequence=('repBC84_rev', 'TGGCACAGGTTCTAGGTCCACTAC'),
 
-            end_sequence=('repBC84_rev', 'GTAGTGGACCTAGAACCTGTGCCA')),
+            end_sequence=('repBC84', 'GTAGTGGACCTAGAACCTGTGCCA')),
 
             Adapter('Barcode 85 (reverse)',
 
-            start_sequence=('repBC85', 'GATCATCCAACTAACTCCTCCGTT'),
+            start_sequence=('repBC85_rev', 'GATCATCCAACTAACTCCTCCGTT'),
 
-            end_sequence=('repBC85_rev', 'AACGGAGGAGTTAGTTGGATGATC')),
+            end_sequence=('repBC85', 'AACGGAGGAGTTAGTTGGATGATC')),
 
             Adapter('Barcode 86 (reverse)',
 
-            start_sequence=('repBC86', 'TACTTACGCTTGTTGGGATCACCT'),
+            start_sequence=('repBC86_rev', 'TACTTACGCTTGTTGGGATCACCT'),
 
-            end_sequence=('repBC86_rev', 'AGGTGATCCCAACAAGCGTAAGTA')),
+            end_sequence=('repBC86', 'AGGTGATCCCAACAAGCGTAAGTA')),
 
             Adapter('Barcode 87 (reverse)',
 
-            start_sequence=('repBC87', 'CCTCCCTAACAACAGGAGCATGTA'),
+            start_sequence=('repBC87_rev', 'CCTCCCTAACAACAGGAGCATGTA'),
 
-            end_sequence=('repBC87_rev', 'TACATGCTCCTGTTGTTAGGGAGG')),
+            end_sequence=('repBC87', 'TACATGCTCCTGTTGTTAGGGAGG')),
 
             Adapter('Barcode 88 (reverse)',
 
-            start_sequence=('repBC88', 'CTGCTTCGGATCGGTAGTAGAAGA'),
+            start_sequence=('repBC88_rev', 'CTGCTTCGGATCGGTAGTAGAAGA'),
 
-            end_sequence=('repBC88_rev', 'TCTTCTACTACCGATCCGAAGCAG')),
+            end_sequence=('repBC88', 'TCTTCTACTACCGATCCGAAGCAG')),
 
             Adapter('Barcode 89 (reverse)',
 
-            start_sequence=('repBC89', 'CAACTAGCCAAACATTGATGCTGT'),
+            start_sequence=('repBC89_rev', 'CAACTAGCCAAACATTGATGCTGT'),
 
-            end_sequence=('repBC89_rev', 'ACAGCATCAATGTTTGGCTAGTTG')),
+            end_sequence=('repBC89', 'ACAGCATCAATGTTTGGCTAGTTG')),
 
             Adapter('Barcode 90 (reverse)',
 
-            start_sequence=('repBC90', 'GCCTCAAACCGTACCCTCTACATC'),
+            start_sequence=('repBC90_rev', 'GCCTCAAACCGTACCCTCTACATC'),
 
-            end_sequence=('repBC90_rev', 'GATGTAGAGGGTACGGTTTGAGGC')),
+            end_sequence=('repBC90', 'GATGTAGAGGGTACGGTTTGAGGC')),
 
             Adapter('Barcode 91 (reverse)',
 
-            start_sequence=('repBC91', 'AGTAGCGTGAGTTCCTATGGAGCC'),
+            start_sequence=('repBC91_rev', 'AGTAGCGTGAGTTCCTATGGAGCC'),
 
-            end_sequence=('repBC91_rev', 'GGCTCCATAGGAACTCACGCTACT')),
+            end_sequence=('repBC91', 'GGCTCCATAGGAACTCACGCTACT')),
 
             Adapter('Barcode 92 (reverse)',
 
-            start_sequence=('repBC92', 'GGTCCTGTATCTTTCCACTCACAA'),
+            start_sequence=('repBC92_rev', 'GGTCCTGTATCTTTCCACTCACAA'),
 
-            end_sequence=('repBC92_rev', 'TTGTGAGTGGAAAGATACAGGACC')),
+            end_sequence=('repBC92', 'TTGTGAGTGGAAAGATACAGGACC')),
 
             Adapter('Barcode 93 (reverse)',
 
-            start_sequence=('repBC93', 'CCCAAGTCTGAAGTGATGGAAACT'),
+            start_sequence=('repBC93_rev', 'CCCAAGTCTGAAGTGATGGAAACT'),
 
-            end_sequence=('repBC93_rev', 'AGTTTCCATCACTTCAGACTTGGG')),
+            end_sequence=('repBC93', 'AGTTTCCATCACTTCAGACTTGGG')),
 
             Adapter('Barcode 94 (reverse)',
 
-            start_sequence=('repBC94', 'GTAGGTGGCAGTTTGAGGACAATC'),
+            start_sequence=('repBC94_rev', 'GTAGGTGGCAGTTTGAGGACAATC'),
 
-            end_sequence=('repBC94_rev', 'GATTGTCCTCAAACTGCCACCTAC')),
+            end_sequence=('repBC94', 'GATTGTCCTCAAACTGCCACCTAC')),
 
             Adapter('Barcode 95 (reverse)',
 
-            start_sequence=('repBC95', 'AAGTCCATTCTTCTTCCAGACAGG'),
+            start_sequence=('repBC95_rev', 'AAGTCCATTCTTCTTCCAGACAGG'),
 
-            end_sequence=('repBC95_rev', 'CCTGTCTGGAAGAAGAATGGACTT')),
+            end_sequence=('repBC95', 'CCTGTCTGGAAGAAGAATGGACTT')),
 
             Adapter('Barcode 96 (reverse)',
 
             start_sequence=('repBC96_rev', 'ATGGTGGACTCTATGACCGTTCAG'),
 
-            end_sequence=('repBC96', 'CTGAACGGTCATAGAGTCCACCAT')),
+            end_sequence=('repBC96', 'CTGAACGGTCATAGAGTCCACCAT'))
             
-            Adapter('Barcode 97 (reverse)',
+            Adapter('Barcode 97(reverse)',
 
             start_sequence=('repBC97_rev', 'TTCTTTCAACAGCCACAGAAACAC'),
 
             end_sequence=('repBC97', 'GTGTTTCTGTGGCTGTTGAAAGAA')),
 
-            Adapter('Barcode 98 (reverse)',
+            Adapter('Barcode 98(reverse)',
 
             start_sequence=('repBC98_rev', 'AGCTAAGGCAAACATCAGCAGACA'),
 
             end_sequence=('repBC98', 'TGTCTGCTGATGTTTGCCTTAGCT')),
 
-            Adapter('Barcode 99 (reverse)',
+            Adapter('Barcode 99(reverse)',
 
             start_sequence=('repBC99_rev', 'CTCAGAACACAGGGTCAATGGTCC'),
 
             end_sequence=('repBC99', 'GGACCATTGACCCTGTGTTCTGAG')),
 
-            Adapter('Barcode 100 (reverse)',
+            Adapter('Barcode 100(reverse)',
 
             start_sequence=('repBC100_rev', 'AAGCCTAAGATAGCACAAAGGGAT'),
 
             end_sequence=('repBC100', 'ATCCCTTTGTGCTATCTTAGGCTT')),
 
-            Adapter('Barcode 101 (reverse)',
+            Adapter('Barcode 101(reverse)',
 
             start_sequence=('repBC101_rev', 'GAACAGGTCCCAAACACATTGGAA'),
 
             end_sequence=('repBC101', 'TTCCAATGTGTTTGGGACCTGTTC')),
 
-            Adapter('Barcode 102 (reverse)',
+            Adapter('Barcode 102(reverse)',
 
             start_sequence=('repBC102_rev', 'AAGAGCGTTTCCGTCTTTCATCAG'),
 
             end_sequence=('repBC102', 'CTGATGAAAGACGGAAACGCTCTT')),
 
-            Adapter('Barcode 103 (reverse)',
+            Adapter('Barcode 103(reverse)',
 
             start_sequence=('repBC103_rev', 'CACAATGGCACCCTTACTTAGGAA'),
 
             end_sequence=('repBC103', 'TTCCTAAGTAAGGGTGCCATTGTG')),
 
-            Adapter('Barcode 104 (reverse)',
+            Adapter('Barcode 104(reverse)',
 
             start_sequence=('repBC104_rev', 'AAGTCCCTTGTTTGGTTCAATGCA'),
 
             end_sequence=('repBC104', 'TGCATTGAACCAAACAAGGGACTT')),
 
-            Adapter('Barcode 105 (reverse)',
+            Adapter('Barcode 105(reverse)',
 
             start_sequence=('repBC105_rev', 'TTGATCCGTGTCGCTCAGAACCAA'),
 
             end_sequence=('repBC105', 'TTGGTTCTGAGCGACACGGATCAA')),
 
-            Adapter('Barcode 106 (reverse)',
+            Adapter('Barcode 106(reverse)',
 
             start_sequence=('repBC106_rev', 'TTCGCAACTTTGGAAACAGGAGAG'),
 
             end_sequence=('repBC106', 'CTCTCCTGTTTCCAAAGTTGCGAA')),
 
-            Adapter('Barcode 107 (reverse)',
+            Adapter('Barcode 107(reverse)',
 
             start_sequence=('repBC107_rev', 'CAAAGTAGATAGCCTCCCTTACCT'),
 
             end_sequence=('repBC107', 'AGGTAAGGGAGGCTATCTACTTTG')),
 
-            Adapter('Barcode 108 (reverse)',
+            Adapter('Barcode 108(reverse)',
 
             start_sequence=('repBC108_rev', 'GTCCATCTTTCTTCGTCTTAGCCT'),
 
             end_sequence=('repBC108', 'AGGCTAAGACGAAGAAAGATGGAC')),
 
-            Adapter('Barcode 109 (reverse)',
+            Adapter('Barcode 109(reverse)',
 
             start_sequence=('repBC109_rev', 'TCTTGCTGAAGGTATGAGCACACT'),
 
             end_sequence=('repBC109', 'AGTGTGCTCATACCTTCAGCAAGA')),
 
-            Adapter('Barcode 110 (reverse)',
+            Adapter('Barcode 110(reverse)',
 
             start_sequence=('repBC110_rev', 'TTGCTCAGAGAACCCTGGGTATCT'),
 
             end_sequence=('repBC110', 'AGATACCCAGGGTTCTCTGAGCAA')),
 
-            Adapter('Barcode 111 (reverse)',
+            Adapter('Barcode 111(reverse)',
 
             start_sequence=('repBC111_rev', 'TCCAGATGGAGCGATTGTGGTGAC'),
 
             end_sequence=('repBC111', 'GTCACCACAATCGCTCCATCTGGA')),
 
-            Adapter('Barcode 112 (reverse)',
+            Adapter('Barcode 112(reverse)',
 
             start_sequence=('repBC112_rev', 'GCAGTTGACTGTCACCAAGCATGA'),
 
             end_sequence=('repBC112', 'TCATGCTTGGTGACAGTCAACTGC')),
 
-            Adapter('Barcode 113 (reverse)',
+            Adapter('Barcode 113(reverse)',
 
             start_sequence=('repBC113_rev', 'TGGGAGGTCCTTTCATGGAGACTA'),
 
             end_sequence=('repBC113', 'TAGTCTCCATGAAAGGACCTCCCA')),
 
-            Adapter('Barcode 114 (reverse)',
+            Adapter('Barcode 114(reverse)',
 
             start_sequence=('repBC114_rev', 'GGTTTGGGTTGTTGGATCTATCCG'),
 
             end_sequence=('repBC114', 'CGGATAGATCCAACAACCCAAACC')),
 
-            Adapter('Barcode 115 (reverse)',
+            Adapter('Barcode 115(reverse)',
 
             start_sequence=('repBC115_rev', 'CAAGGAGCACGTCACAGTTCTCTA'),
 
             end_sequence=('repBC115', 'TAGAGAACTGTGACGTGCTCCTTG')),
 
-            Adapter('Barcode 116 (reverse)',
+            Adapter('Barcode 116(reverse)',
 
             start_sequence=('repBC116_rev', 'AACGCAGGACAATGCTCTTGAGTA'),
 
             end_sequence=('repBC116', 'TACTCAAGAGCATTGTCCTGCGTT')),
 
-            Adapter('Barcode 117 (reverse)',
+            Adapter('Barcode 117(reverse)',
 
             start_sequence=('repBC117_rev', 'CTCGGAGAGTAACAGGCAAGAGAT'),
 
             end_sequence=('repBC117', 'ATCTCTTGCCTGTTACTCTCCGAG')),
 
-            Adapter('Barcode 118 (reverse)',
+            Adapter('Barcode 118(reverse)',
 
             start_sequence=('repBC118_rev', 'TGGTGACGGTACATAGTTTCATGC'),
 
             end_sequence=('repBC118', 'GCATGAAACTATGTACCGTCACCA')),
 
-            Adapter('Barcode 119 (reverse)',
+            Adapter('Barcode 119(reverse)',
 
             start_sequence=('repBC119_rev', 'GAATGATGGGTCACTTGGAGGAGC'),
 
             end_sequence=('repBC119', 'GCTCCTCCAAGTGACCCATCATTC')),
 
-            Adapter('Barcode 120 (reverse)',
+            Adapter('Barcode 120(reverse)',
 
             start_sequence=('repBC120_rev', 'CGTATCAAGACGTACTACCCAATC'),
 
             end_sequence=('repBC120', 'GATTGGGTAGTACGTCTTGATACG')),
 
-            Adapter('Barcode 121 (reverse)',
+            Adapter('Barcode 121(reverse)',
 
             start_sequence=('repBC121_rev', 'CATTCAACCCATACGTTGCGTTAC'),
 
             end_sequence=('repBC121', 'GTAACGCAACGTATGGGTTGAATG')),
 
-            Adapter('Barcode 122 (reverse)',
+            Adapter('Barcode 122(reverse)',
 
             start_sequence=('repBC122_rev', 'GTATGTCGCTGATGCGTAAGAGTA'),
 
             end_sequence=('repBC122', 'TACTCTTACGCATCAGCGACATAC')),
 
-            Adapter('Barcode 123 (reverse)',
+            Adapter('Barcode 123(reverse)',
 
             start_sequence=('repBC123_rev', 'GCTGCCAATCTAAGTGGAGAATGT'),
 
             end_sequence=('repBC123', 'ACATTCTCCACTTAGATTGGCAGC')),
 
-            Adapter('Barcode 124 (reverse)',
+            Adapter('Barcode 124(reverse)',
 
             start_sequence=('repBC124_rev', 'ACTTTGGATTCTTCCGTGGCATAG'),
 
             end_sequence=('repBC124', 'CTATGCCACGGAAGAATCCAAAGT')),
 
-            Adapter('Barcode 125 (reverse)',
+            Adapter('Barcode 125(reverse)',
 
             start_sequence=('repBC125_rev', 'GATCTGTGGAACCCAACTGTCTGG'),
 
             end_sequence=('repBC125', 'CCAGACAGTTGGGTTCCACAGATC')),
 
-            Adapter('Barcode 126 (reverse)',
+            Adapter('Barcode 126(reverse)',
 
             start_sequence=('repBC126_rev', 'AGTCACTCCTAGATGAAGCTGGGT'),
 
             end_sequence=('repBC126', 'ACCCAGCTTCATCTAGGAGTGACT')),
 
-            Adapter('Barcode 127 (reverse)',
+            Adapter('Barcode 127(reverse)',
 
             start_sequence=('repBC127_rev', 'ACGCATGTCGTTAGTCAATGTAAC'),
 
             end_sequence=('repBC127', 'GTTACATTGACTAACGACATGCGT')),
 
-            Adapter('Barcode 128 (reverse)',
+            Adapter('Barcode 128(reverse)',
 
             start_sequence=('repBC128_rev', 'GGTCATCTTCAGGCTGTTGCAGTA'),
 
             end_sequence=('repBC128', 'TACTGCAACAGCCTGAAGATGACC')),
 
-            Adapter('Barcode 129 (reverse)',
+            Adapter('Barcode 129(reverse)',
 
             start_sequence=('repBC129_rev', 'GTCTGAACCATGCCAACCCATTGA'),
 
             end_sequence=('repBC129', 'TCAATGGGTTGGCATGGTTCAGAC')),
 
-            Adapter('Barcode 130 (reverse)',
+            Adapter('Barcode 130(reverse)',
 
             start_sequence=('repBC130_rev', 'CCTGCTTCTTGAGTTCAGTTTCCG'),
 
             end_sequence=('repBC130', 'CGGAAACTGAACTCAAGAAGCAGG')),
 
-            Adapter('Barcode 131 (reverse)',
+            Adapter('Barcode 131(reverse)',
 
             start_sequence=('repBC131_rev', 'GATGAATGCTTCGACTCCCTGACG'),
 
             end_sequence=('repBC131', 'CGTCAGGGAGTCGAAGCATTCATC')),
 
-            Adapter('Barcode 132 (reverse)',
+            Adapter('Barcode 132(reverse)',
 
             start_sequence=('repBC132_rev', 'TACAGGGTCAATCTCCTCCTTTGT'),
 
             end_sequence=('repBC132', 'ACAAAGGAGGAGATTGACCCTGTA')),
 
-            Adapter('Barcode 133 (reverse)',
+            Adapter('Barcode 133(reverse)',
 
             start_sequence=('repBC133_rev', 'CGAACGCTAACTACGAATCATAGT'),
 
             end_sequence=('repBC133', 'ACTATGATTCGTAGTTAGCGTTCG')),
- 
-            Adapter('Barcode 134 (reverse)',
+
+            Adapter('Barcode 134(reverse)',
 
             start_sequence=('repBC134_rev', 'TGGTGTCCTCCTGCTATGTCTCTT'),
 
             end_sequence=('repBC134', 'AAGAGACATAGCAGGAGGACACCA')),
 
-            Adapter('Barcode 135 (reverse)',
+            Adapter('Barcode 135(reverse)',
 
             start_sequence=('repBC135_rev', 'GGTGTCACAGTTGATCTCGGAGAG'),
 
             end_sequence=('repBC135', 'CTCTCCGAGATCAACTGTGACACC')),
 
-            Adapter('Barcode 136 (reverse)',
+            Adapter('Barcode 136(reverse)',
 
             start_sequence=('repBC136_rev', 'ATCAAACCTACTGGTTCCTATCGG'),
 
             end_sequence=('repBC136', 'CCGATAGGAACCAGTAGGTTTGAT')),
 
-            Adapter('Barcode 137 (reverse)',
+            Adapter('Barcode 137(reverse)',
 
             start_sequence=('repBC137_rev', 'CCTCAAGCAGGTCTCTTCATGTGC'),
 
             end_sequence=('repBC137', 'GCACATGAAGAGACCTGCTTGAGG')),
 
-            Adapter('Barcode 138 (reverse)',
+            Adapter('Barcode 138(reverse)',
 
             start_sequence=('repBC138_rev', 'GATGCACATTCCGTATGGACGGTC'),
 
             end_sequence=('repBC138', 'GACCGTCCATACGGAATGTGCATC')),
 
-            Adapter('Barcode 139 (reverse)',
+            Adapter('Barcode 139(reverse)',
 
             start_sequence=('repBC139_rev', 'GAAAGCAACAACTGAGCTGCCATC'),
 
             end_sequence=('repBC139', 'GATGGCAGCTCAGTTGTTGCTTTC')),
 
-            Adapter('Barcode 140 (reverse)',
+            Adapter('Barcode 140(reverse)',
 
             start_sequence=('repBC140_rev', 'TCATCTTTCCCAAGGAAGGGTGAG'),
 
             end_sequence=('repBC140', 'CTCACCCTTCCTTGGGAAAGATGA')),
 
-            Adapter('Barcode 141 (reverse)',
+            Adapter('Barcode 141(reverse)',
 
             start_sequence=('repBC141_rev', 'CTAGGTTGTCTCTACGGAAGTCAC'),
 
             end_sequence=('repBC141', 'GTGACTTCCGTAGAGACAACCTAG')),
 
-            Adapter('Barcode 142 (reverse)',
+            Adapter('Barcode 142(reverse)',
 
             start_sequence=('repBC142_rev', 'CGACACAAGGTGAAGTAAGAGGAC'),
 
             end_sequence=('repBC142', 'GTCCTCTTACTTCACCTTGTGTCG')),
 
-            Adapter('Barcode 143 (reverse)',
+            Adapter('Barcode 143(reverse)',
 
             start_sequence=('repBC143_rev', 'CACGTTGAAAGGGTGTCCATCAAG'),
 
             end_sequence=('repBC143', 'CTTGATGGACACCCTTTCAACGTG')),
 
-            Adapter('Barcode 144 (reverse)',
+            Adapter('Barcode 144(reverse)',
 
             start_sequence=('repBC144_rev', 'GTAGACCTTGCACCATGTGGACAT'),
 
             end_sequence=('repBC144', 'ATGTCCACATGGTGCAAGGTCTAC')),
 
-            Adapter('Barcode 145 (reverse)',
+            Adapter('Barcode 145(reverse)',
 
             start_sequence=('repBC145_rev', 'TGACCACGTCGAAACTTGTAGATC'),
 
             end_sequence=('repBC145', 'GATCTACAAGTTTCGACGTGGTCA')),
 
-            Adapter('Barcode 146 (reverse)',
+            Adapter('Barcode 146(reverse)',
 
             start_sequence=('repBC146_rev', 'TACCTGAAACCATTGAAGGACGCA'),
 
             end_sequence=('repBC146', 'TGCGTCCTTCAATGGTTTCAGGTA')),
 
-            Adapter('Barcode 147 (reverse)',
+            Adapter('Barcode 147(reverse)',
 
             start_sequence=('repBC147_rev', 'CAACTTACTCGGATGACCCAGGAG'),
 
             end_sequence=('repBC147', 'CTCCTGGGTCATCCGAGTAAGTTG')),
 
-            Adapter('Barcode 148 (reverse)',
+            Adapter('Barcode 148(reverse)',
 
             start_sequence=('repBC148_rev', 'ACTCTCTGTTCTAACAAGCACCTG'),
 
             end_sequence=('repBC148', 'CAGGTGCTTGTTAGAACAGAGAGT')),
 
-            Adapter('Barcode 149 (reverse)',
+            Adapter('Barcode 149(reverse)',
 
             start_sequence=('repBC149_rev', 'TCTAAGTCTGGCAGAGTACGTTTC'),
 
             end_sequence=('repBC149', 'GAAACGTACTCTGCCAGACTTAGA')),
 
-            Adapter('Barcode 150 (reverse)',
+            Adapter('Barcode 150(reverse)',
 
             start_sequence=('repBC150_rev', 'GTTCTCGAAACTGATTCCTCGTAC'),
 
             end_sequence=('repBC150', 'GTACGAGGAATCAGTTTCGAGAAC')),
 
-            Adapter('Barcode 151 (reverse)',
+            Adapter('Barcode 151(reverse)',
 
             start_sequence=('repBC151_rev', 'ACCTTCTACTCTGGGACTAGATGC'),
 
             end_sequence=('repBC151', 'GCATCTAGTCCCAGAGTAGAAGGT')),
 
-            Adapter('Barcode 152 (reverse)',
+            Adapter('Barcode 152(reverse)',
 
             start_sequence=('repBC152_rev', 'AGTGATGAGTTGTCCACCGTACTT'),
 
             end_sequence=('repBC152', 'AAGTACGGTGGACAACTCATCACT')),
 
-            Adapter('Barcode 153 (reverse)',
+            Adapter('Barcode 153(reverse)',
 
             start_sequence=('repBC153_rev', 'CGATCCAGTTAGAGGAAGCCTTCA'),
 
             end_sequence=('repBC153', 'TGAAGGCTTCCTCTAACTGGATCG')),
 
-            Adapter('Barcode 154 (reverse)',
+            Adapter('Barcode 154(reverse)',
 
             start_sequence=('repBC154_rev', 'GTCCAATGAGGAGGCACTCAGACT'),
 
             end_sequence=('repBC154', 'AGTCTGAGTGCCTCCTCATTGGAC')),
 
-            Adapter('Barcode 155 (reverse)',
+            Adapter('Barcode 155(reverse)',
 
             start_sequence=('repBC155_rev', 'AGTTAGTTCTTCCCTTTCGTTCCA'),
 
             end_sequence=('repBC155', 'TGGAACGAAAGGGAAGAACTAACT')),
 
-            Adapter('Barcode 156 (reverse)',
+            Adapter('Barcode 156(reverse)',
 
             start_sequence=('repBC156_rev', 'GTACAAGTTGGTTCCGAAGATACC'),
 
             end_sequence=('repBC156', 'GGTATCTTCGGAACCAACTTGTAC')),
 
-            Adapter('Barcode 157 (reverse)',
+            Adapter('Barcode 157(reverse)',
 
             start_sequence=('repBC157_rev', 'TCTCCCATGATACACGGAGTCGTG'),
 
             end_sequence=('repBC157', 'CACGACTCCGTGTATCATGGGAGA')),
 
-            Adapter('Barcode 158 (reverse)',
+            Adapter('Barcode 158(reverse)',
 
             start_sequence=('repBC158_rev', 'GTGGGTGTGAATGAAGTCCTGCAT'),
 
             end_sequence=('repBC158', 'ATGCAGGACTTCATTCACACCCAC')),
 
-            Adapter('Barcode 159 (reverse)',
+            Adapter('Barcode 159(reverse)',
 
             start_sequence=('repBC159_rev', 'AAGACTTCAAGGACCCAGAACTTG'),
 
             end_sequence=('repBC159', 'CAAGTTCTGGGTCCTTGAAGTCTT')),
 
-            Adapter('Barcode 160 (reverse)',
+            Adapter('Barcode 160(reverse)',
 
             start_sequence=('repBC160_rev', 'CTGTCTGTGGCAAGTAGCTGAAAG'),
 
             end_sequence=('repBC160', 'CTTTCAGCTACTTGCCACAGACAG')),
 
-            Adapter('Barcode 161 (reverse)',
+            Adapter('Barcode 161(reverse)',
 
             start_sequence=('repBC161_rev', 'AAGAGTCAGAAGGAGGTCTGTTCC'),
 
             end_sequence=('repBC161', 'GGAACAGACCTCCTTCTGACTCTT')),
 
-            Adapter('Barcode 162 (reverse)',
+            Adapter('Barcode 162(reverse)',
 
             start_sequence=('repBC162_rev', 'GGCTAGGAACACCGAAGATTGAAG'),
 
             end_sequence=('repBC162', 'CTTCAATCTTCGGTGTTCCTAGCC')),
 
-            Adapter('Barcode 163 (reverse)',
+            Adapter('Barcode 163(reverse)',
 
             start_sequence=('repBC163_rev', 'CAAACAGTATGAGCACACGAGTGG'),
 
             end_sequence=('repBC163', 'CCACTCGTGTGCTCATACTGTTTG')),
 
-            Adapter('Barcode 164 (reverse)',
+            Adapter('Barcode 164(reverse)',
 
             start_sequence=('repBC164_rev', 'CTTAGATTCGTTTGTGCTTCCACC'),
 
             end_sequence=('repBC164', 'GGTGGAAGCACAAACGAATCTAAG')),
 
-            Adapter('Barcode 165 (reverse)',
+            Adapter('Barcode 165(reverse)',
 
             start_sequence=('repBC165_rev', 'ATGTCAGGCTCGGAGTACACTAGA'),
 
             end_sequence=('repBC165', 'TCTAGTGTACTCCGAGCCTGACAT')),
 
-            Adapter('Barcode 166 (reverse)',
+            Adapter('Barcode 166(reverse)',
 
             start_sequence=('repBC166_rev', 'TGGCTCTAGGATGCTTACCTCACA'),
 
             end_sequence=('repBC166', 'TGTGAGGTAAGCATCCTAGAGCCA')),
 
-            Adapter('Barcode 167 (reverse)',
+            Adapter('Barcode 167(reverse)',
 
             start_sequence=('repBC167_rev', 'GGACCCTCGTAGTCCATCATTGTC'),
 
             end_sequence=('repBC167', 'GACAATGATGGACTACGAGGGTCC')),
 
-            Adapter('Barcode 168 (reverse)',
+            Adapter('Barcode 168(reverse)',
 
             start_sequence=('repBC168_rev', 'ATCGACTGACAGAAGGTATGGCTG'),
 
             end_sequence=('repBC168', 'CAGCCATACCTTCTGTCAGTCGAT')),
 
-            Adapter('Barcode 169 (reverse)',
+            Adapter('Barcode 169(reverse)',
 
             start_sequence=('repBC169_rev', 'TTCTTTGTCCTACTGTCTTGGGAG'),
 
             end_sequence=('repBC169', 'CTCCCAAGACAGTAGGACAAAGAA')),
 
-            Adapter('Barcode 170 (reverse)',
+            Adapter('Barcode 170(reverse)',
 
             start_sequence=('repBC170_rev', 'ATGTTCGTAGGGTTGTGAAGGTGA'),
 
             end_sequence=('repBC170', 'TCACCTTCACAACCCTACGAACAT')),
 
-            Adapter('Barcode 171 (reverse)',
+            Adapter('Barcode 171(reverse)',
 
             start_sequence=('repBC171_rev', 'CTGGTAACACTACTTGGGACAACA'),
 
             end_sequence=('repBC171', 'TGTTGTCCCAAGTAGTGTTACCAG')),
 
-            Adapter('Barcode 172 (reverse)',
+            Adapter('Barcode 172(reverse)',
 
             start_sequence=('repBC172_rev', 'TACGAACAATGTAGTTGGGACCTG'),
 
             end_sequence=('repBC172', 'CAGGTCCCAACTACATTGTTCGTA')),
 
-            Adapter('Barcode 173 (reverse)',
+            Adapter('Barcode 173(reverse)',
 
             start_sequence=('repBC173_rev', 'GCTGGACAAAGAGTCCCTATGTTG'),
 
             end_sequence=('repBC173', 'CAACATAGGGACTCTTTGTCCAGC')),
 
-            Adapter('Barcode 174 (reverse)',
+            Adapter('Barcode 174(reverse)',
 
             start_sequence=('repBC174_rev', 'TTGTTGGCTTGGAAACTTAGTCTT'),
 
             end_sequence=('repBC174', 'AAGACTAAGTTTCCAAGCCAACAA')),
 
-            Adapter('Barcode 175 (reverse)',
+            Adapter('Barcode 175(reverse)',
 
             start_sequence=('repBC175_rev', 'AGAGCCTCTATCAAGAGTGACGAC'),
 
             end_sequence=('repBC175', 'GTCGTCACTCTTGATAGAGGCTCT')),
 
-            Adapter('Barcode 176 (reverse)',
+            Adapter('Barcode 176(reverse)',
 
             start_sequence=('repBC176_rev', 'GCCTACTTGTATCCTATCGCTAAG'),
 
             end_sequence=('repBC176', 'CTTAGCGATAGGATACAAGTAGGC')),
 
-            Adapter('Barcode 177 (reverse)',
+            Adapter('Barcode 177(reverse)',
 
             start_sequence=('repBC177_rev', 'GGAGTAGAACACTTCAACAAAGCC'),
 
             end_sequence=('repBC177', 'GGCTTTGTTGAAGTGTTCTACTCC')),
 
-            Adapter('Barcode 178 (reverse)',
+            Adapter('Barcode 178(reverse)',
 
             start_sequence=('repBC178_rev', 'TGCCATACAGCTCAAGGTCCTGAT'),
 
             end_sequence=('repBC178', 'ATCAGGACCTTGAGCTGTATGGCA')),
 
-            Adapter('Barcode 179 (reverse)',
+            Adapter('Barcode 179(reverse)',
 
             start_sequence=('repBC179_rev', 'ACCGAACTAGATCCATTCCAGCTT'),
 
             end_sequence=('repBC179', 'AAGCTGGAATGGATCTAGTTCGGT')),
 
-            Adapter('Barcode 180 (reverse)',
+            Adapter('Barcode 180(reverse)',
 
             start_sequence=('repBC180_rev', 'CATCACCTGGATCTTGGACACGGT'),
 
             end_sequence=('repBC180', 'ACCGTGTCCAAGATCCAGGTGATG')),
 
-            Adapter('Barcode 181 (reverse)',
+            Adapter('Barcode 181(reverse)',
 
             start_sequence=('repBC181_rev', 'TTGCCTCCTCAATCAACCTACTAG'),
 
             end_sequence=('repBC181', 'CTAGTAGGTTGATTGAGGAGGCAA')),
 
-            Adapter('Barcode 182 (reverse)',
+            Adapter('Barcode 182(reverse)',
 
             start_sequence=('repBC182_rev', 'TCCACTAGGGTTGTTCGCATTCAT'),
 
             end_sequence=('repBC182', 'ATGAATGCGAACAACCCTAGTGGA')),
 
-            Adapter('Barcode 183 (reverse)',
+            Adapter('Barcode 183(reverse)',
 
             start_sequence=('repBC183_rev', 'ATGTACGAGGACAACAATCCCTCC'),
 
             end_sequence=('repBC183', 'GGAGGGATTGTTGTCCTCGTACAT')),
 
-            Adapter('Barcode 184 (reverse)',
+            Adapter('Barcode 184(reverse)',
 
             start_sequence=('repBC184_rev', 'AGAAGATGATGGCTAGGCTTCGTC'),
 
             end_sequence=('repBC184', 'GACGAAGCCTAGCCATCATCTTCT')),
 
-            Adapter('Barcode 185 (reverse)',
+            Adapter('Barcode 185(reverse)',
 
             start_sequence=('repBC185_rev', 'TGTCGTAGTTACAAACCGATCAAC'),
 
             end_sequence=('repBC185', 'GTTGATCGGTTTGTAACTACGACA')),
 
-            Adapter('Barcode 186 (reverse)',
+            Adapter('Barcode 186(reverse)',
 
             start_sequence=('repBC186_rev', 'CTACATCTCCCATGCCAAACTCCG'),
 
             end_sequence=('repBC186', 'CGGAGTTTGGCATGGGAGATGTAG')),
 
-            Adapter('Barcode 187 (reverse)',
+            Adapter('Barcode 187(reverse)',
 
             start_sequence=('repBC187_rev', 'CCGAGGTATCCTTGAGTGCGATGA'),
 
             end_sequence=('repBC187', 'TCATCGCACTCAAGGATACCTCGG')),
 
-            Adapter('Barcode 188 (reverse)',
+            Adapter('Barcode 188(reverse)',
 
             start_sequence=('repBC188_rev', 'AACACTCACCTTTCTATGTCCTGG'),
 
             end_sequence=('repBC188', 'CCAGGACATAGAAAGGTGAGTGTT')),
 
-            Adapter('Barcode 189 (reverse)',
+            Adapter('Barcode 189(reverse)',
 
             start_sequence=('repBC189_rev', 'TCAAAGGTAGTGAAGTCTGAACCC'),
 
             end_sequence=('repBC189', 'GGGTTCAGACTTCACTACCTTTGA')),
 
-            Adapter('Barcode 190 (reverse)',
+            Adapter('Barcode 190(reverse)',
 
             start_sequence=('repBC190_rev', 'CTAACAGGAGTTTGACGGTGGATG'),
 
             end_sequence=('repBC190', 'CATCCACCGTCAAACTCCTGTTAG')),
 
-            Adapter('Barcode 191 (reverse)',
+            Adapter('Barcode 191(reverse)',
 
             start_sequence=('repBC191_rev', 'GGACAGACCTTCTTCTTACCTGAA'),
 
             end_sequence=('repBC191', 'TTCAGGTAAGAAGAAGGTCTGTCC')),
 
-            Adapter('Barcode 192 (reverse)',
+            Adapter('Barcode 192(reverse)',
 
             start_sequence=('repBC192_rev', 'GACTTGCCAGTATCTCAGGTGGTA'),
 
